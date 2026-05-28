@@ -38,7 +38,7 @@ export default function Hero({ user }) {
           <div className="hero-card">
             <div className="card-main">
               <img 
-                src="https://unavatar.io/instagram/pallarfnt_" 
+                src="https://scontent.cdninstagram.com/v/t51.82787-19/613581481_18098181238850331_253225339187148054_n.jpg?_nc_cat=109&ccb=7-5&_nc_sid=bf7eb4&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLnd3dy4xMDgwLkMzIn0%3D&_nc_ohc=2iUCzIWCIgwQ7kNvwH0WuAI&_nc_oc=Ado_Tee2EMIdXUrorMYbQSV1-_KjtlJf5Md61RHFndmym7qDgiRKTrFJt9jLoffI_9DqdYvvd5bpDe6x6h1RGAbb&_nc_zt=24&_nc_ht=scontent.cdninstagram.com&_nc_gid=bJY860pxqjN6a4aNZlDJ7g&_nc_ss=7b6a8&oh=00_Af42jaPvIjoqyHVZzMrkydMXwfQbn34PgwDn5RzigzFYZg&oe=6A1E32F0" 
                 alt="Naufall Profile" 
                 className="avatar avatar-img"
               />
