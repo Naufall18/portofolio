@@ -101,10 +101,13 @@ section:not(#hero){padding:96px 0}
 /* ===== BUTTONS ===== */
 .btn-dark{display:inline-flex;align-items:center;gap:8px;background:var(--ink);color:#fff;text-decoration:none;font-size:13.5px;font-weight:600;padding:12px 26px;border-radius:99px;transition:transform .25s var(--spring),box-shadow .25s}
 .btn-dark:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(0,0,0,.2)}
+html.dark .btn-dark{background:var(--blue);color:#fff}
 .btn-wa{background:#25D366}
 .btn-blue{background:var(--blue)}
 .btn-outline{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--ink2);text-decoration:none;font-size:13.5px;font-weight:500;padding:12px 22px;border-radius:99px;border:1.5px solid var(--border2);transition:border-color .2s,color .2s,background .2s,transform .2s}
 .btn-outline:hover{border-color:var(--ink);color:var(--ink);background:var(--bg2);transform:translateY(-1px)}
+html.dark .btn-outline{color:var(--ink);border-color:var(--border2)}
+html.dark .btn-outline:hover{border-color:var(--blue);color:var(--blue);background:var(--bg2)}
 
 /* ===== HERO CARD ===== */
 .hero-card{position:relative;opacity:0;transform:translateX(28px) scale(.96);animation:ci .85s var(--spring) .5s forwards}
@@ -154,8 +157,12 @@ html.dark .about-body p strong{color:var(--ink)}
 .about-socials{display:flex;gap:9px;margin-top:26px;flex-wrap:wrap}
 .soc{display:inline-flex;align-items:center;gap:7px;background:var(--bg2);color:var(--ink2);border:1px solid var(--border);text-decoration:none;font-size:12px;font-weight:600;padding:9px 16px;border-radius:99px;transition:all .22s;letter-spacing:.2px}
 .soc:hover{background:var(--ink);color:#fff;border-color:var(--ink);transform:translateY(-2px)}
+html.dark .soc{background:var(--bg2);color:var(--ink);border-color:var(--border)}
+html.dark .soc:hover{background:var(--blue);color:#fff;border-color:var(--blue)}
 .soc-wa{background:#25D366;color:#fff;border-color:#25D366}
 .soc-wa:hover{background:#1da851;border-color:#1da851}
+html.dark .soc-wa{background:#25D366;color:#fff;border-color:#25D366}
+html.dark .soc-wa:hover{background:#1da851;border-color:#1da851}
 .info-list{display:flex;flex-direction:column}
 .ii{display:flex;align-items:center;gap:14px;padding:15px 0;border-bottom:1px solid var(--border)}
 .ii:first-child{border-top:1px solid var(--border)}
