@@ -2,6 +2,17 @@ import { useEffect, useState } from 'react';
 
 export default function Navbar() {
   const [drawerOpen, setDrawerOpen] = useState(false);
+  const [darkMode, setDarkMode] = useState(false);
+
+  // Initialize dark mode from localStorage
+  useEffect(() => {
+    const savedTheme = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const isDark = savedTheme === 'dark' || (!savedTheme && prefersDark);
+    
+    setDarkMode(isDark);
+    document.documentElement.classList.toggle('dark', isDark);
+  }, []);
 
   useEffect(() => {
     const onScroll = () => {
@@ -10,6 +21,13 @@ export default function Navbar() {
     window.addEventListener('scroll', onScroll);
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
+
+  const toggleTheme = () => {
+    const newDarkMode = !darkMode;
+    setDarkMode(newDarkMode);
+    document.documentElement.classList.toggle('dark', newDarkMode);
+    localStorage.setItem('theme', newDarkMode ? 'dark' : 'light');
+  };
 
   const smoothScroll = (e, href) => {
     const target = document.querySelector(href);
@@ -36,6 +54,9 @@ export default function Navbar() {
           <li><a href="#experience" onClick={(e) => smoothScroll(e, '#experience')}>Experience</a></li>
           <li><a href="#contact" onClick={(e) => smoothScroll(e, '#contact')} className="nav-cta">Contact</a></li>
         </ul>
+        <button className="theme-toggle" onClick={toggleTheme} aria-label="Toggle theme">
+          {darkMode ? '☀️' : '🌙'}
+        </button>
         <button className="menu-btn" onClick={toggleDrawer} aria-label="Open menu">
           ☰
         </button>
@@ -56,6 +77,9 @@ export default function Navbar() {
           <li><a href="#experience" onClick={(e) => smoothScroll(e, '#experience')}>Experience</a></li>
           <li><a href="#contact" onClick={(e) => smoothScroll(e, '#contact')} className="nav-cta">Contact</a></li>
         </ul>
+        <button className="drawer-theme-toggle" onClick={toggleTheme}>
+          {darkMode ? '☀️ Light Mode' : '🌙 Dark Mode'}
+        </button>
       </div>
 
       {/* Overlay */}
