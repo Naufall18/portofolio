@@ -37,7 +37,11 @@ export default function Hero({ user }) {
           {/* Hero Card */}
           <div className="hero-card">
             <div className="card-main">
-              <div className="avatar">NDA</div>
+              <img 
+                src="https://unavatar.io/instagram/pallarfnt_" 
+                alt="Naufall Profile" 
+                className="avatar avatar-img"
+              />
               <div className="card-name">Naufal Dwi Arifianto</div>
               <div className="card-role">Mobile Dev · Flutter · Laravel · Indonesia</div>
               <div className="status-box">

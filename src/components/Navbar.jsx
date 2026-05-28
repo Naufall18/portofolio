@@ -27,7 +27,7 @@ export default function Navbar() {
     <>
       <nav id="nav">
         <a className="nav-logo" href="#hero" onClick={(e) => smoothScroll(e, '#hero')}>
-          N<em>.</em>Dwi
+          Naufall
         </a>
         <ul className="nav-links">
           <li><a href="#about" onClick={(e) => smoothScroll(e, '#about')}>About</a></li>
@@ -44,7 +44,7 @@ export default function Navbar() {
       {/* Mobile Drawer */}
       <div className={`mobile-drawer ${drawerOpen ? 'open' : ''}`}>
         <div className="drawer-header">
-          <div className="drawer-logo">N<em>.</em>Dwi</div>
+          <div className="drawer-logo">Naufall</div>
           <button className="close-btn" onClick={closeDrawer} aria-label="Close menu">
             ✕
           </button>
