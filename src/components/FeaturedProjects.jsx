@@ -3,12 +3,13 @@ import { GitHubIcon } from './icons';
 const FEATURED = [
   {
     emoji: '🗓️',
-    tag: 'Flagship · 2026',
-    name: 'Bookly',
+    tag: 'Flagship',
+    status: 'Completed',
+    name: 'Gerai Jasa',
     tagline: 'Multi-Vendor Booking Platform',
     desc:
-      'A full ecosystem for service booking — customers discover & book vendors, vendors manage their storefront, and admins oversee everything. Built as three connected products sharing one Laravel API.',
-    stack: ['Laravel 11', 'React 18', 'TypeScript', 'Flutter 3', 'REST API', 'MySQL'],
+      'A complete, production-ready ecosystem for service booking — customers discover & book vendors, vendors manage their storefront, and admins oversee everything. Three connected products on one Laravel API, with a real booking engine: slot locking, a booking state machine, and Midtrans/Xendit payments.',
+    stack: ['Laravel', 'PostgreSQL', 'Redis', 'React + TS', 'Flutter', 'Riverpod'],
     accent: 'linear-gradient(90deg,#818CF8,#A78BFA)',
     solid: '#A78BFA',
     glow: 'rgba(167,139,250,.24)',
@@ -80,9 +81,12 @@ export default function FeaturedProjects() {
               }}
             >
               <div className="fp-body">
-                <span className="fp-tag">
-                  <span className="dot" /> {p.tag}
-                </span>
+                <div className="fp-tags">
+                  <span className="fp-tag">
+                    <span className="dot" /> {p.tag}
+                  </span>
+                  {p.status && <span className="fp-status">✓ {p.status}</span>}
+                </div>
                 <h3 className="fp-name">{p.name}</h3>
                 <div className="fp-tagline">{p.tagline}</div>
                 <p className="fp-desc">{p.desc}</p>

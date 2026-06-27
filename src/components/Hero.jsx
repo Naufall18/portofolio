@@ -48,13 +48,13 @@ export default function Hero({ user }) {
               <div className="status-box">
                 <div className="st-top">
                   <div className="st-dot" />
-                  <div className="st-label">Currently building</div>
+                  <div className="st-label">Latest work</div>
                 </div>
                 <div className="st-text">
                   {user?.bio ? (
                     <strong>{user.bio}</strong>
                   ) : (
-                    <><strong>Bookly</strong> — a multi-vendor booking platform across mobile, web &amp; API.</>
+                    <>Shipped <strong>Gerai Jasa</strong> — a full booking platform across mobile, web &amp; API.</>
                   )}
                 </div>
               </div>

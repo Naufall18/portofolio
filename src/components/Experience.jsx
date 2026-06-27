@@ -15,7 +15,7 @@ export default function Experience() {
                 <div className="ei-date">2024 — Present</div>
                 <div className="ei-role">Fullstack &amp; Mobile Developer</div>
                 <div className="ei-company">Freelance / Personal Projects <span className="ei-badge">Active</span></div>
-                <div className="ei-body">Shipping complete products end-to-end — Flutter apps, React dashboards, and Laravel APIs. Currently building Bookly &amp; Velvoria, focusing on clean architecture and polished UX across every layer.</div>
+                <div className="ei-body">Shipping complete products end-to-end — Flutter apps, React dashboards, and Laravel APIs. Recently delivered Gerai Jasa (a full multi-vendor booking platform) and Velvoria, focusing on clean architecture and polished UX across every layer.</div>
               </div>
             </div>
             <div className="ei reveal d1">
