@@ -18,14 +18,17 @@ export default function CanvasBackground() {
     resize();
     window.addEventListener('resize', resize);
 
-    for (let i = 0; i < 55; i++) {
+    const COLORS = ['167,139,250', '96,165,250', '244,114,182'];
+
+    for (let i = 0; i < 60; i++) {
       pts.push({
         x: Math.random() * W,
         y: Math.random() * H,
-        vx: (Math.random() - 0.5) * 0.28,
-        vy: (Math.random() - 0.5) * 0.28,
-        r: Math.random() * 1.8 + 0.8,
-        op: Math.random() * 0.4 + 0.08,
+        vx: (Math.random() - 0.5) * 0.26,
+        vy: (Math.random() - 0.5) * 0.26,
+        r: Math.random() * 1.7 + 0.7,
+        op: Math.random() * 0.45 + 0.12,
+        c: COLORS[Math.floor(Math.random() * COLORS.length)],
       });
     }
 
@@ -38,7 +41,7 @@ export default function CanvasBackground() {
         if (p.y < 0 || p.y > H) p.vy *= -1;
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(37,99,235,${p.op})`;
+        ctx.fillStyle = `rgba(${p.c},${p.op})`;
         ctx.fill();
       });
       for (let i = 0; i < pts.length; i++) {
@@ -48,7 +51,7 @@ export default function CanvasBackground() {
             ctx.beginPath();
             ctx.moveTo(pts[i].x, pts[i].y);
             ctx.lineTo(pts[j].x, pts[j].y);
-            ctx.strokeStyle = `rgba(37,99,235,${0.1 * (1 - d / 130)})`;
+            ctx.strokeStyle = `rgba(167,139,250,${0.12 * (1 - d / 130)})`;
             ctx.lineWidth = 0.5;
             ctx.stroke();
           }

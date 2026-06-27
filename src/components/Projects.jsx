@@ -9,13 +9,13 @@ const EMOJIS = ['🚀', '📱', '💡', '🛠️', '⚡', '🎯', '🌟', '🔮'
 
 export default function Projects({ repos, loading, error, username }) {
   return (
-    <section id="projects" className="light">
+    <section id="projects">
       <div className="wrap">
         <div className="proj-header">
           <div className="reveal">
-            <div className="sh-eye">Open Source</div>
-            <h2 className="sh-title">GitHub Projects</h2>
-            <p className="sh-sub">Fetched live from GitHub — real repos, real code.</p>
+            <div className="sh-eye">More on GitHub</div>
+            <h2 className="sh-title">Fresh from my <span className="grad">repositories</span></h2>
+            <p className="sh-sub">Pulled live from the GitHub API — updated the moment I push.</p>
           </div>
           <a
             href={`https://github.com/${username}?tab=repositories`}
@@ -35,12 +35,9 @@ export default function Projects({ repos, loading, error, username }) {
         )}
 
         {error && !loading && (
-          <div style={{
-            background: '#FEF2F2', border: '1px solid #FECACA', color: '#991B1B',
-            borderRadius: '16px', padding: '18px 22px', fontSize: '14px',
-          }}>
-            Couldn&apos;t load repos. Visit{' '}
-            <a href={`https://github.com/${username}`} target="_blank" rel="noreferrer" style={{ color: 'var(--blue)' }}>
+          <div className="proj-err">
+            Couldn&apos;t load repos right now. Visit{' '}
+            <a href={`https://github.com/${username}`} target="_blank" rel="noreferrer">
               github.com/{username}
             </a>{' '}
             directly.

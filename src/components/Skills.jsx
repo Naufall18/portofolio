@@ -3,20 +3,20 @@ import useSkillBars from '../hooks/useSkillBars';
 
 const SKILL_ITEMS = [
   { icon: '📱', name: 'Flutter & Dart', pills: ['Widgets', 'Animations', 'Custom Painter', 'Platform Channels', 'Responsive UI'], delay: 'd1' },
-  { icon: '🗂️', name: 'State Management', pills: ['GetX', 'Provider', 'BLoC', 'Riverpod'], delay: 'd2' },
+  { icon: '🗂️', name: 'State Management', pills: ['GetX', 'Riverpod', 'Provider', 'BLoC'], delay: 'd2' },
   { icon: '⚙️', name: 'Laravel Backend', pills: ['REST API', 'Eloquent ORM', 'Sanctum Auth', 'MySQL'], delay: 'd3' },
-  { icon: '☁️', name: 'Firebase & Supabase', pills: ['Firestore', 'Auth', 'Storage', 'Supabase DB', 'Realtime'], delay: 'd4' },
-  { icon: '🔧', name: 'Tools & Workflow', pills: ['Git', 'GitHub', 'Postman', 'Figma', 'VS Code', 'Android Studio'], delay: 'd5' },
+  { icon: '🌐', name: 'Web Frontend', pills: ['React', 'TypeScript', 'Vite', 'Tailwind CSS'], delay: 'd4' },
+  { icon: '☁️', name: 'Cloud & Tools', pills: ['Firebase', 'Supabase', 'Git', 'Postman', 'Figma', 'VS Code'], delay: 'd5' },
 ];
 
 const SKILL_BARS = [
   { name: 'Flutter / Dart', pct: 90 },
   { name: 'Mobile UI Implementation', pct: 88 },
-  { name: 'GetX / BLoC State Management', pct: 82 },
-  { name: 'Laravel / REST API', pct: 72 },
+  { name: 'State Management (GetX / Riverpod)', pct: 82 },
+  { name: 'Laravel / REST API', pct: 75 },
+  { name: 'React / TypeScript', pct: 72 },
   { name: 'Firebase / Supabase', pct: 70 },
-  { name: 'Git & Version Control', pct: 80 },
-  { name: 'Clean Architecture', pct: 75 },
+  { name: 'Clean Architecture', pct: 78 },
 ];
 
 export default function Skills() {

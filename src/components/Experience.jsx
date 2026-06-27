@@ -12,10 +12,10 @@ export default function Experience() {
             <div className="ei reveal">
               <div className="ei-track"><div className="ei-dot" /><div className="ei-line" /></div>
               <div>
-                <div className="ei-date">2023 — Present</div>
-                <div className="ei-role">Mobile Developer</div>
+                <div className="ei-date">2024 — Present</div>
+                <div className="ei-role">Fullstack &amp; Mobile Developer</div>
                 <div className="ei-company">Freelance / Personal Projects <span className="ei-badge">Active</span></div>
-                <div className="ei-body">Building production Flutter apps end-to-end — from UI to Laravel API integration. Focusing on clean architecture, GetX state management, and smooth mobile experiences.</div>
+                <div className="ei-body">Shipping complete products end-to-end — Flutter apps, React dashboards, and Laravel APIs. Currently building Bookly &amp; Velvoria, focusing on clean architecture and polished UX across every layer.</div>
               </div>
             </div>
             <div className="ei reveal d1">

@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
 import Skills from './components/Skills';
+import FeaturedProjects from './components/FeaturedProjects';
 import Projects from './components/Projects';
 import Experience from './components/Experience';
 import Contact from './components/Contact';
@@ -17,12 +18,15 @@ export default function App() {
 
   return (
     <>
-      <CustomCursor />
+      <div className="aurora"><i /></div>
+      <div className="grain" />
       <CanvasBackground />
+      <CustomCursor />
       <Navbar />
       <Hero user={user} />
       <About />
       <Skills />
+      <FeaturedProjects />
       <Projects repos={repos} loading={loading} error={error} username={username} />
       <Experience />
       <Contact />

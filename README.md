@@ -1,14 +1,19 @@
 # 🚀 Naufal Dwi Arifianto — Portfolio
 
-Personal portfolio website built with **React + Vite** — showcasing my work as a Mobile Developer specializing in Flutter, Dart, and Laravel.
+> **Live:** [naufall18.github.io/portofolio](https://naufall18.github.io/portofolio/)
+
+A dark, premium personal portfolio built with **React + Vite** — showcasing my work as a **Fullstack & Mobile Developer** (Flutter · Laravel · React).
 
 ## ✨ Features
 
-- **Live GitHub Integration** — Repos & profile data fetched from GitHub API
+- **Dark Premium / Glassmorphism UI** — Aurora gradients, glass cards, gradient typography
+- **Featured Projects** — Curated highlights (Bookly, Velvoria, Quizyfy) with multi-repo links
+- **Live GitHub Integration** — Repos & profile data fetched live from the GitHub API
 - **Particle Canvas Background** — Animated particle network effect
 - **Scroll Reveal Animations** — Smooth entrance animations on scroll
 - **Animated Skill Bars** — Progress bars animate when visible
 - **Custom Cursor** — Interactive dot + ring cursor effect
+- **SEO & Social Ready** — Open Graph + Twitter Card meta for clean link previews
 - **Fully Responsive** — Looks great on desktop, tablet, and mobile
 
 ## 🛠️ Tech Stack
@@ -29,7 +34,8 @@ src/
 │   ├── Hero.jsx              # Hero section + profile card
 │   ├── About.jsx             # About me + info sidebar
 │   ├── Skills.jsx            # Tech stack + skill bars
-│   ├── Projects.jsx          # GitHub repos grid
+│   ├── FeaturedProjects.jsx  # Curated featured projects
+│   ├── Projects.jsx          # Live GitHub repos grid
 │   ├── Experience.jsx        # Timeline + education
 │   ├── Contact.jsx           # Contact links
 │   ├── Footer.jsx            # Footer

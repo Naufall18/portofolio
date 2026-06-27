@@ -3,9 +3,9 @@ export default function Footer() {
     <footer>
       <div className="wrap">
         <div className="fi">
-          <span className="fl">N<em>.</em>Dwi</span>
-          <span className="ft">© 2025 Naufal Dwi Arifianto · Mobile Developer · Indonesia</span>
-          <span className="ft">Built with Flutter spirit 📱</span>
+          <span className="fl">Naufal<em>.</em>Dwi</span>
+          <span className="ft">© 2026 Naufal Dwi Arifianto · Fullstack &amp; Mobile Developer · Indonesia</span>
+          <span className="ft">Designed &amp; built with React 📱</span>
         </div>
       </div>
     </footer>

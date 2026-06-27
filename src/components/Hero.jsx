@@ -8,24 +8,24 @@ export default function Hero({ user }) {
           <div>
             <div className="badge-row">
               <span className="badge b-avail">Open to work</span>
-              <span className="badge b-stack">Flutter · Laravel · Firebase</span>
+              <span className="badge b-stack">Flutter · Laravel · React</span>
             </div>
             <h1 className="hero-name">
               Naufal<span className="dim">Dwi Arifianto</span>
             </h1>
             <p className="hero-sub">
-              Mobile Developer &amp; <strong>Full-Stack Builder</strong>
+              Fullstack &amp; <strong>Mobile Developer</strong>
             </p>
             <p className="hero-desc">
-              I build <em>cross-platform mobile apps</em> with Flutter and power them with{' '}
-              <em>Laravel backends</em>. Based in Indonesia — crafting experiences that feel
-              native, fast, and polished.
+              I build <em>cross-platform mobile apps</em> with Flutter and ship the{' '}
+              <em>web dashboards &amp; Laravel APIs</em> behind them. Based in Indonesia — crafting
+              complete products that feel native, fast, and polished end to end.
             </p>
             <div className="hero-btns">
-              <a href="#projects" className="btn-dark">
-                <GridIcon /> See My Work
+              <a href="#work" className="btn-primary">
+                <GridIcon /> See my work
               </a>
-              <a href="https://wa.me/6282244089648" target="_blank" rel="noreferrer" className="btn-dark btn-wa">
+              <a href="https://wa.me/6282244089648" target="_blank" rel="noreferrer" className="btn-primary btn-wa">
                 <WhatsAppIcon size={13} /> WhatsApp
               </a>
               <a href="https://github.com/Naufall18" target="_blank" rel="noreferrer" className="btn-outline">
@@ -37,23 +37,24 @@ export default function Hero({ user }) {
           {/* Hero Card */}
           <div className="hero-card">
             <div className="card-main">
-              <img 
-                src="https://scontent.cdninstagram.com/v/t51.82787-19/613581481_18098181238850331_253225339187148054_n.jpg?_nc_cat=109&ccb=7-5&_nc_sid=bf7eb4&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLnd3dy4xMDgwLkMzIn0%3D&_nc_ohc=2iUCzIWCIgwQ7kNvwH0WuAI&_nc_oc=Ado_Tee2EMIdXUrorMYbQSV1-_KjtlJf5Md61RHFndmym7qDgiRKTrFJt9jLoffI_9DqdYvvd5bpDe6x6h1RGAbb&_nc_zt=24&_nc_ht=scontent.cdninstagram.com&_nc_gid=bJY860pxqjN6a4aNZlDJ7g&_nc_ss=7b6a8&oh=00_Af42jaPvIjoqyHVZzMrkydMXwfQbn34PgwDn5RzigzFYZg&oe=6A1E32F0" 
-                alt="Naufall Profile" 
-                className="avatar avatar-img"
+              <img
+                src="https://github.com/Naufall18.png"
+                alt="Naufal Dwi Arifianto"
+                className="avatar"
+                loading="lazy"
               />
               <div className="card-name">Naufal Dwi Arifianto</div>
-              <div className="card-role">Mobile Dev · Flutter · Laravel · Indonesia</div>
+              <div className="card-role">Fullstack · Flutter · Laravel · Indonesia</div>
               <div className="status-box">
                 <div className="st-top">
                   <div className="st-dot" />
-                  <div className="st-label">Currently working on</div>
+                  <div className="st-label">Currently building</div>
                 </div>
                 <div className="st-text">
                   {user?.bio ? (
                     <strong>{user.bio}</strong>
                   ) : (
-                    <>Building mobile apps with <strong>Flutter</strong> &amp; <strong>Laravel</strong>.</>
+                    <><strong>Bookly</strong> — a multi-vendor booking platform across mobile, web &amp; API.</>
                   )}
                 </div>
               </div>
@@ -68,18 +69,18 @@ export default function Hero({ user }) {
                   <div className="cs-l">Followers</div>
                 </div>
                 <div className="cs">
-                  <div className="cs-n">2+</div>
-                  <div className="cs-l">Yrs Exp</div>
+                  <div className="cs-n">3+</div>
+                  <div className="cs-l">Yrs Coding</div>
                 </div>
               </div>
               <div className="ctags">
-                <span className="ct ct-blue">Flutter</span>
-                <span className="ct ct-blue">Dart</span>
-                <span className="ct ct-blue">Laravel</span>
-                <span className="ct ct-gray">Firebase</span>
-                <span className="ct ct-gray">Supabase</span>
-                <span className="ct ct-gray">GetX</span>
-                <span className="ct ct-gray">REST API</span>
+                <span className="ct ct-on">Flutter</span>
+                <span className="ct ct-on">Dart</span>
+                <span className="ct ct-on">Laravel</span>
+                <span className="ct ct-on">React</span>
+                <span className="ct ct-off">Firebase</span>
+                <span className="ct ct-off">Supabase</span>
+                <span className="ct ct-off">REST API</span>
               </div>
             </div>
             <div className="float-card fc1">

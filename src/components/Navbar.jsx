@@ -1,18 +1,14 @@
 import { useEffect, useState } from 'react';
 
+const LINKS = [
+  { href: '#about', label: 'About' },
+  { href: '#skills', label: 'Skills' },
+  { href: '#work', label: 'Work' },
+  { href: '#experience', label: 'Experience' },
+];
+
 export default function Navbar() {
   const [drawerOpen, setDrawerOpen] = useState(false);
-  const [darkMode, setDarkMode] = useState(false);
-
-  // Initialize dark mode from localStorage
-  useEffect(() => {
-    const savedTheme = localStorage.getItem('theme');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const isDark = savedTheme === 'dark' || (!savedTheme && prefersDark);
-    
-    setDarkMode(isDark);
-    document.documentElement.classList.toggle('dark', isDark);
-  }, []);
 
   useEffect(() => {
     const onScroll = () => {
@@ -22,68 +18,60 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  const toggleTheme = () => {
-    const newDarkMode = !darkMode;
-    setDarkMode(newDarkMode);
-    document.documentElement.classList.toggle('dark', newDarkMode);
-    localStorage.setItem('theme', newDarkMode ? 'dark' : 'light');
-  };
-
   const smoothScroll = (e, href) => {
     const target = document.querySelector(href);
     if (target) {
       e.preventDefault();
       target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      setDrawerOpen(false); // Close drawer after navigation
+      setDrawerOpen(false);
     }
   };
-
-  const toggleDrawer = () => setDrawerOpen(!drawerOpen);
-  const closeDrawer = () => setDrawerOpen(false);
 
   return (
     <>
       <nav id="nav">
         <a className="nav-logo" href="#hero" onClick={(e) => smoothScroll(e, '#hero')}>
-          Naufall
+          Naufal<em>.</em>
         </a>
         <ul className="nav-links">
-          <li><a href="#about" onClick={(e) => smoothScroll(e, '#about')}>About</a></li>
-          <li><a href="#skills" onClick={(e) => smoothScroll(e, '#skills')}>Skills</a></li>
-          <li><a href="#projects" onClick={(e) => smoothScroll(e, '#projects')}>Projects</a></li>
-          <li><a href="#experience" onClick={(e) => smoothScroll(e, '#experience')}>Experience</a></li>
-          <li><a href="#contact" onClick={(e) => smoothScroll(e, '#contact')} className="nav-cta">Contact</a></li>
+          {LINKS.map((l) => (
+            <li key={l.href}>
+              <a href={l.href} onClick={(e) => smoothScroll(e, l.href)}>{l.label}</a>
+            </li>
+          ))}
+          <li>
+            <a href="#contact" onClick={(e) => smoothScroll(e, '#contact')} className="nav-cta">
+              Let&apos;s talk
+            </a>
+          </li>
         </ul>
-        <button className="theme-toggle" onClick={toggleTheme} aria-label="Toggle theme">
-          {darkMode ? '☀️' : '🌙'}
-        </button>
-        <button className="menu-btn" onClick={toggleDrawer} aria-label="Open menu">
+        <button className="menu-btn" onClick={() => setDrawerOpen(true)} aria-label="Open menu">
           ☰
         </button>
       </nav>
 
-      {/* Mobile Drawer */}
       <div className={`mobile-drawer ${drawerOpen ? 'open' : ''}`}>
         <div className="drawer-header">
-          <div className="drawer-logo">Naufall</div>
-          <button className="close-btn" onClick={closeDrawer} aria-label="Close menu">
+          <div className="drawer-logo">Naufal<em>.</em></div>
+          <button className="close-btn" onClick={() => setDrawerOpen(false)} aria-label="Close menu">
             ✕
           </button>
         </div>
         <ul className="drawer-links">
-          <li><a href="#about" onClick={(e) => smoothScroll(e, '#about')}>About</a></li>
-          <li><a href="#skills" onClick={(e) => smoothScroll(e, '#skills')}>Skills</a></li>
-          <li><a href="#projects" onClick={(e) => smoothScroll(e, '#projects')}>Projects</a></li>
-          <li><a href="#experience" onClick={(e) => smoothScroll(e, '#experience')}>Experience</a></li>
-          <li><a href="#contact" onClick={(e) => smoothScroll(e, '#contact')} className="nav-cta">Contact</a></li>
+          {LINKS.map((l) => (
+            <li key={l.href}>
+              <a href={l.href} onClick={(e) => smoothScroll(e, l.href)}>{l.label}</a>
+            </li>
+          ))}
+          <li>
+            <a href="#contact" onClick={(e) => smoothScroll(e, '#contact')} className="nav-cta">
+              Let&apos;s talk
+            </a>
+          </li>
         </ul>
-        <button className="drawer-theme-toggle" onClick={toggleTheme}>
-          {darkMode ? '☀️ Light Mode' : '🌙 Dark Mode'}
-        </button>
       </div>
 
-      {/* Overlay */}
-      <div className={`overlay ${drawerOpen ? 'show' : ''}`} onClick={closeDrawer} />
+      <div className={`overlay ${drawerOpen ? 'show' : ''}`} onClick={() => setDrawerOpen(false)} />
     </>
   );
 }
