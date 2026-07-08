@@ -1,5 +1,3 @@
-import CanvasBackground from './components/CanvasBackground';
-import CustomCursor from './components/CustomCursor';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -18,10 +16,6 @@ export default function App() {
 
   return (
     <>
-      <div className="aurora"><i /></div>
-      <div className="grain" />
-      <CanvasBackground />
-      <CustomCursor />
       <Navbar />
       <Hero user={user} />
       <About />

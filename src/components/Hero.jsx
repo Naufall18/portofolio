@@ -18,8 +18,8 @@ export default function Hero({ user }) {
             </p>
             <p className="hero-desc">
               I build <em>cross-platform mobile apps</em> with Flutter and ship the{' '}
-              <em>web dashboards &amp; Laravel APIs</em> behind them. Based in Indonesia — crafting
-              complete products that feel native, fast, and polished end to end.
+              <em>web dashboards &amp; Laravel APIs</em> behind them. Informatics
+              student at UPN &quot;Veteran&quot; Jawa Timur — shipping complete products end to end.
             </p>
             <div className="hero-btns">
               <a href="#work" className="btn-primary">
@@ -34,11 +34,11 @@ export default function Hero({ user }) {
             </div>
           </div>
 
-          {/* Hero Card */}
+          {/* Index card */}
           <div className="hero-card">
             <div className="card-main">
               <img
-                src="https://github.com/Naufall18.png"
+                src={`${import.meta.env.BASE_URL}avatar.jpg`}
                 alt="Naufal Dwi Arifianto"
                 className="avatar"
                 loading="lazy"
@@ -48,14 +48,11 @@ export default function Hero({ user }) {
               <div className="status-box">
                 <div className="st-top">
                   <div className="st-dot" />
-                  <div className="st-label">Latest work</div>
+                  <div className="st-label">Now</div>
                 </div>
                 <div className="st-text">
-                  {user?.bio ? (
-                    <strong>{user.bio}</strong>
-                  ) : (
-                    <>Shipped <strong>Gerai Jasa</strong> — a full booking platform across mobile, web &amp; API.</>
-                  )}
+                  <strong>1st-year Informatics</strong> @ UPN &quot;Veteran&quot; Jawa
+                  Timur — building Flutter &amp; Laravel products on the side.
                 </div>
               </div>
               <div className="cdivider" />
@@ -81,20 +78,6 @@ export default function Hero({ user }) {
                 <span className="ct ct-off">Firebase</span>
                 <span className="ct ct-off">Supabase</span>
                 <span className="ct ct-off">REST API</span>
-              </div>
-            </div>
-            <div className="float-card fc1">
-              <div className="fc-ico">📱</div>
-              <div>
-                <div className="fc-t">Mobile First</div>
-                <div className="fc-s">Flutter &amp; Dart</div>
-              </div>
-            </div>
-            <div className="float-card fc2">
-              <div className="fc-ico">⚡</div>
-              <div>
-                <div className="fc-t">Ex-PT Humma</div>
-                <div className="fc-s">Mobile Developer</div>
               </div>
             </div>
           </div>

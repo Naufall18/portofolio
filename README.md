@@ -2,17 +2,16 @@
 
 > **Live:** [naufall18.github.io/portofolio](https://naufall18.github.io/portofolio/)
 
-A dark, premium personal portfolio built with **React + Vite** — showcasing my work as a **Fullstack & Mobile Developer** (Flutter · Laravel · React).
+An editorial, Swiss-inspired personal portfolio built with **React + Vite** — showcasing my work as a **Fullstack & Mobile Developer** (Flutter · Laravel · React).
 
 ## ✨ Features
 
-- **Dark Premium / Glassmorphism UI** — Aurora gradients, glass cards, gradient typography
-- **Featured Projects** — Curated highlights (Bookly, Velvoria, Quizyfy) with multi-repo links
+- **Editorial / Swiss UI** — Bone paper, oxblood accent, oversized Bricolage Grotesque type, hairline grid
+- **Catalog Signature** — Each featured project shown across its mobile · web · API surfaces
 - **Live GitHub Integration** — Repos & profile data fetched live from the GitHub API
-- **Particle Canvas Background** — Animated particle network effect
+- **Featured Projects** — Curated highlights (Gerai Jasa, Velvoria, Quizyfy) with multi-repo links
 - **Scroll Reveal Animations** — Smooth entrance animations on scroll
 - **Animated Skill Bars** — Progress bars animate when visible
-- **Custom Cursor** — Interactive dot + ring cursor effect
 - **SEO & Social Ready** — Open Graph + Twitter Card meta for clean link previews
 - **Fully Responsive** — Looks great on desktop, tablet, and mobile
 

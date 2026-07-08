@@ -26,9 +26,11 @@ export default function About() {
                 <strong>Firebase / Supabase</strong> depending on what the project needs.
               </p>
               <p className="reveal d3">
-                I previously interned at <strong>PT Humma Teknologi Indonesia</strong> as a Mobile
-                Developer, shipping real production apps in a professional agile team — sharpening
-                my sense for clean code, reviews, and delivering quality on time.
+                I&apos;m now a first-year <strong>Informatics</strong> student at{' '}
+                <strong>UPN &quot;Veteran&quot; Jawa Timur</strong>, after graduating from{' '}
+                <strong>SMKN 1 Pasuruan</strong> (Software Engineering). Along the way I interned
+                at <strong>PT Humma Teknologi Indonesia</strong> as a Mobile Developer, shipping
+                real production apps in a professional agile team.
               </p>
             </div>
             <div className="about-socials reveal d4">
@@ -50,7 +52,7 @@ export default function About() {
           <div className="info-list reveal rr">
             <div className="ii"><div className="ii-ico">📍</div><div><div className="ii-l">Location</div><div className="ii-v">Indonesia</div></div></div>
             <div className="ii"><div className="ii-ico">💼</div><div><div className="ii-l">Status</div><div className="ii-v"><span className="ii-badge">🟢 Open to work</span></div></div></div>
-            <div className="ii"><div className="ii-ico">🏢</div><div><div className="ii-l">Previous</div><div className="ii-v">PT Humma Teknologi Indonesia</div></div></div>
+            <div className="ii"><div className="ii-ico">🎓</div><div><div className="ii-l">Education</div><div className="ii-v">Informatics · UPN &quot;Veteran&quot; Jatim</div></div></div>
             <div className="ii"><div className="ii-ico">📱</div><div><div className="ii-l">Mobile</div><div className="ii-v">Flutter · Dart</div></div></div>
             <div className="ii"><div className="ii-ico">🔧</div><div><div className="ii-l">Backend &amp; Web</div><div className="ii-v">Laravel · React · Supabase</div></div></div>
             <div className="ii"><div className="ii-ico">📞</div><div><div className="ii-l">WhatsApp</div><div className="ii-v"><a href="https://wa.me/6282244089648">+62 822-4408-9648</a></div></div></div>

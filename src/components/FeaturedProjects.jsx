@@ -71,21 +71,16 @@ export default function FeaturedProjects() {
 
         <div className="feat-grid">
           {FEATURED.map((p, i) => (
-            <article
-              key={p.name}
-              className={`fp reveal d${i + 1}`}
-              style={{
-                '--accent': p.accent,
-                '--accent-solid': p.solid,
-                '--accent-glow': p.glow,
-              }}
-            >
+            <article key={p.name} className={`fp reveal d${i + 1}`}>
+              <div className="fp-index">
+                {String(i + 1).padStart(2, '0')}
+              </div>
               <div className="fp-body">
                 <div className="fp-tags">
                   <span className="fp-tag">
                     <span className="dot" /> {p.tag}
                   </span>
-                  {p.status && <span className="fp-status">✓ {p.status}</span>}
+                  {p.status && <span className="fp-status">{p.status}</span>}
                 </div>
                 <h3 className="fp-name">{p.name}</h3>
                 <div className="fp-tagline">{p.tagline}</div>
@@ -95,17 +90,14 @@ export default function FeaturedProjects() {
                     <span key={s} className="fp-chip">{s}</span>
                   ))}
                 </div>
-                <div className="fp-links">
-                  {p.links.map((l) => (
-                    <a key={l.url} href={l.url} target="_blank" rel="noreferrer" className="fp-link">
-                      <GitHubIcon size={13} /> {l.label}
-                    </a>
-                  ))}
-                </div>
               </div>
-              <div className="fp-visual">
-                <div className="fp-orbits"><span /><span /><span /></div>
-                <div className="fp-emoji">{p.emoji}</div>
+              <div className="fp-surfaces">
+                {p.links.map((l) => (
+                  <a key={l.url} href={l.url} target="_blank" rel="noreferrer" className="fp-surface">
+                    <span className="fp-surface-l">{l.label}</span>
+                    <span className="fp-surface-arr"><GitHubIcon size={11} /> →</span>
+                  </a>
+                ))}
               </div>
             </article>
           ))}
