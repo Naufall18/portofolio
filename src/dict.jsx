@@ -72,7 +72,7 @@ export const T = {
     work: {
       eye: 'Selected Work', titlePre: "Projects I'm ", grad: 'proud of',
       sub: 'End-to-end products I designed and shipped — each spanning mobile, web, and backend. Real code, not mockups.',
-      kind: { mobile: 'Mobile App', web: 'Web', api: 'Backend API' },
+      kind: { demo: 'Live Demo', mobile: 'Mobile App', web: 'Web', api: 'Backend API' },
       projects: {
         gerai: {
           tag: 'Flagship', status: 'Completed', tagline: 'Multi-Vendor Booking Platform',
@@ -192,7 +192,7 @@ export const T = {
     work: {
       eye: 'Karya Pilihan', titlePre: 'Project yang saya ', grad: 'banggakan',
       sub: 'Produk end-to-end yang saya desain dan kirim — mencakup mobile, web, dan backend. Kode asli, bukan mockup.',
-      kind: { mobile: 'Aplikasi Mobile', web: 'Web', api: 'Backend API' },
+      kind: { demo: 'Demo Live', mobile: 'Aplikasi Mobile', web: 'Web', api: 'Backend API' },
       projects: {
         gerai: {
           tag: 'Unggulan', status: 'Selesai', tagline: 'Platform Booking Multi-Vendor',

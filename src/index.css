@@ -199,6 +199,8 @@ nav.scrolled{border-bottom-color:var(--line-2)}
 .fp-surface{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:14px 16px;border-bottom:1px solid var(--line);text-decoration:none;transition:background .2s,color .2s}
 .fp-surface:last-child{border-bottom:none}
 .fp-surface:hover{background:var(--ink);color:var(--paper)}
+.fp-surface-demo{color:var(--ox);font-weight:600}
+.fp-surface-demo:hover{background:var(--ox);color:#fff}
 .fp-surface-l{font-family:var(--mono);font-size:12px;font-weight:600;letter-spacing:.3px}
 .fp-surface-k{font-size:9px;font-family:var(--mono);text-transform:uppercase;letter-spacing:1px;opacity:.6}
 .fp-surface-arr{font-size:14px}

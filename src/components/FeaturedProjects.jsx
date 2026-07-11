@@ -8,6 +8,7 @@ const PROJECTS = [
     name: 'Gerai Jasa',
     stack: ['Laravel', 'PostgreSQL', 'Redis', 'React + TS', 'Flutter', 'Riverpod'],
     links: [
+      { kind: 'demo', url: 'https://geraijasa.naufaldwi.my.id' },
       { kind: 'mobile', url: 'https://github.com/Naufall18/Gerai-Jasa-mobile' },
       { kind: 'web', url: 'https://github.com/Naufall18/Gerai-Jasa-web' },
       { kind: 'api', url: 'https://github.com/Naufall18/Gerai-Jasa-backend' },
@@ -83,9 +84,17 @@ export default function FeaturedProjects() {
                 </div>
                 <div className="fp-surfaces">
                   {p.links.map((l) => (
-                    <a key={l.url} href={l.url} target="_blank" rel="noreferrer" className="fp-surface">
+                    <a
+                      key={l.url}
+                      href={l.url}
+                      target="_blank"
+                      rel="noreferrer"
+                      className={`fp-surface${l.kind === 'demo' ? ' fp-surface-demo' : ''}`}
+                    >
                       <span className="fp-surface-l">{w.kind[l.kind]}</span>
-                      <span className="fp-surface-arr"><GitHubIcon size={11} /> →</span>
+                      <span className="fp-surface-arr">
+                        {l.kind !== 'demo' && <GitHubIcon size={11} />} →
+                      </span>
                     </a>
                   ))}
                 </div>
