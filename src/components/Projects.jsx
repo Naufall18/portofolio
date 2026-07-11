@@ -1,3 +1,5 @@
+import { useLang } from '../i18n.jsx';
+
 const LANG_COLORS = {
   Dart: '#00B4AB', JavaScript: '#F7DF1E', TypeScript: '#3178C6',
   Python: '#3776AB', Kotlin: '#7F52FF', Swift: '#FA7343',
@@ -8,14 +10,17 @@ const LANG_COLORS = {
 const EMOJIS = ['🚀', '📱', '💡', '🛠️', '⚡', '🎯', '🌟', '🔮', '🧩', '📦', '🎨', '🔐'];
 
 export default function Projects({ repos, loading, error, username }) {
+  const { t } = useLang();
+  const p = t.projectsSec;
+
   return (
     <section id="projects">
       <div className="wrap">
         <div className="proj-header">
           <div className="reveal">
-            <div className="sh-eye">More on GitHub</div>
-            <h2 className="sh-title">Fresh from my <span className="grad">repositories</span></h2>
-            <p className="sh-sub">Pulled live from the GitHub API — updated the moment I push.</p>
+            <div className="sh-eye">{p.eye}</div>
+            <h2 className="sh-title">{p.titlePre}<span className="grad">{p.grad}</span></h2>
+            <p className="sh-sub">{p.sub}</p>
           </div>
           <a
             href={`https://github.com/${username}?tab=repositories`}
@@ -23,24 +28,24 @@ export default function Projects({ repos, loading, error, username }) {
             rel="noreferrer"
             className="btn-outline reveal"
           >
-            All Repos ↗
+            {p.allRepos}
           </a>
         </div>
 
         {loading && (
           <div className="proj-loading">
             <div className="spin" />
-            <span>Fetching from GitHub…</span>
+            <span>{p.loading}</span>
           </div>
         )}
 
         {error && !loading && (
           <div className="proj-err">
-            Couldn&apos;t load repos right now. Visit{' '}
+            {p.errPre}
             <a href={`https://github.com/${username}`} target="_blank" rel="noreferrer">
               github.com/{username}
-            </a>{' '}
-            directly.
+            </a>
+            {p.errPost}
           </div>
         )}
 
@@ -48,7 +53,7 @@ export default function Projects({ repos, loading, error, username }) {
           <div className="proj-grid">
             {repos.map((repo, i) => {
               const col = LANG_COLORS[repo.language] || '#2563EB';
-              const desc = (repo.description || 'No description.').slice(0, 90) +
+              const desc = (repo.description || p.noDesc).slice(0, 90) +
                 (repo.description && repo.description.length > 90 ? '…' : '');
 
               return (
@@ -59,7 +64,7 @@ export default function Projects({ repos, loading, error, username }) {
                     </div>
                     <span className="pc-arrow">↗</span>
                   </div>
-                  <div className="pc-name">{repo.name.replace(/-/g, ' ')}</div>
+                  <div className="pc-name">{repo.name.replace(/[-_]/g, ' ')}</div>
                   <div className="pc-desc">{desc}</div>
                   <div className="pc-meta">
                     {repo.language && (

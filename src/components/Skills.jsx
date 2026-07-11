@@ -1,5 +1,6 @@
 import { useRef } from 'react';
 import useSkillBars from '../hooks/useSkillBars';
+import { useLang } from '../i18n.jsx';
 
 const SKILL_ITEMS = [
   { icon: '📱', name: 'Flutter & Dart', pills: ['Widgets', 'Animations', 'Custom Painter', 'Platform Channels', 'Responsive UI'], delay: 'd1' },
@@ -11,8 +12,8 @@ const SKILL_ITEMS = [
 
 const SKILL_BARS = [
   { name: 'Flutter / Dart', pct: 90 },
-  { name: 'Mobile UI Implementation', pct: 88 },
-  { name: 'State Management (GetX / Riverpod)', pct: 82 },
+  { name: 'Mobile UI', pct: 88 },
+  { name: 'State Management', pct: 82 },
   { name: 'Laravel / REST API', pct: 75 },
   { name: 'React / TypeScript', pct: 72 },
   { name: 'Firebase / Supabase', pct: 70 },
@@ -22,17 +23,15 @@ const SKILL_BARS = [
 export default function Skills() {
   const barsRef = useRef(null);
   useSkillBars(barsRef);
+  const { t } = useLang();
 
   return (
     <section id="skills">
       <div className="wrap">
         <div className="sh reveal">
-          <div className="sh-eye">Tech Stack</div>
-          <h2 className="sh-title">What I work with</h2>
-          <p className="sh-sub">
-            A focused stack built around shipping mobile experiences that feel native and
-            backends that scale.
-          </p>
+          <div className="sh-eye">{t.skills.eye}</div>
+          <h2 className="sh-title">{t.skills.title}</h2>
+          <p className="sh-sub">{t.skills.sub}</p>
         </div>
         <div className="skills-grid">
           <div className="skill-items">

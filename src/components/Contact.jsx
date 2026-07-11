@@ -1,20 +1,18 @@
 import { WhatsAppIcon, LinkedInIcon, GitHubIcon, InstagramIcon } from './icons';
+import { useLang } from '../i18n.jsx';
 
 export default function Contact() {
+  const { t } = useLang();
+  const c = t.contact;
   return (
     <section id="contact">
       <div className="wrap">
         <div className="contact-card reveal">
           <div className="contact-grid">
             <div>
-              <div className="sh-eye">Contact</div>
-              <p className="cq">
-                Have a project?<br />Let&apos;s <span>build it</span><br />together.
-              </p>
-              <p className="sh-sub">
-                Open to freelance, internship, part-time, and full-time opportunities. I respond
-                fast — reach out anytime.
-              </p>
+              <div className="sh-eye">{c.eye}</div>
+              <p className="cq">{c.cq}</p>
+              <p className="sh-sub">{c.sub}</p>
             </div>
             <div className="clinks">
               <a href="https://wa.me/6282244089648" target="_blank" rel="noreferrer" className="cl">

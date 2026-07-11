@@ -1,37 +1,25 @@
 import { GitHubIcon, LinkedInIcon, InstagramIcon, WhatsAppIcon } from './icons';
+import { useLang } from '../i18n.jsx';
 
 export default function About() {
+  const { t } = useLang();
+  const a = t.about;
+  const info = a.info;
   return (
     <section id="about">
       <div className="wrap">
         <div className="about-grid">
           <div>
             <div className="sh reveal">
-              <div className="sh-eye">About me</div>
+              <div className="sh-eye">{a.eye}</div>
               <h2 className="sh-title">
-                Building apps people <span className="grad">love using</span>
+                {a.titlePre}<span className="grad">{a.grad}</span>
               </h2>
             </div>
             <div className="about-body">
-              <p className="reveal d1">
-                Hi, I'm <strong>Naufal Dwi Arifianto</strong> — a Fullstack &amp; Mobile Developer
-                from Indonesia who builds complete products, from the{' '}
-                <strong>Flutter app in your hand</strong> to the{' '}
-                <strong>Laravel API and React dashboard</strong> behind it.
-              </p>
-              <p className="reveal d2">
-                My core is <strong>Flutter &amp; Dart</strong> — smooth animations, custom widgets,
-                pixel-perfect UIs and clean architecture. On the backend I work with{' '}
-                <strong>Laravel</strong>, <strong>REST APIs</strong>, and{' '}
-                <strong>Firebase / Supabase</strong> depending on what the project needs.
-              </p>
-              <p className="reveal d3">
-                I&apos;m now a first-year <strong>Informatics</strong> student at{' '}
-                <strong>UPN &quot;Veteran&quot; Jawa Timur</strong>, after graduating from{' '}
-                <strong>SMKN 1 Pasuruan</strong> (Software Engineering). Along the way I interned
-                at <strong>PT Humma Teknologi Indonesia</strong> as a Mobile Developer, shipping
-                real production apps in a professional agile team.
-              </p>
+              <p className="reveal d1">{a.p1}</p>
+              <p className="reveal d2">{a.p2}</p>
+              <p className="reveal d3">{a.p3}</p>
             </div>
             <div className="about-socials reveal d4">
               <a href="https://github.com/Naufall18" target="_blank" rel="noreferrer" className="soc">
@@ -50,13 +38,13 @@ export default function About() {
           </div>
 
           <div className="info-list reveal rr">
-            <div className="ii"><div className="ii-ico">📍</div><div><div className="ii-l">Location</div><div className="ii-v">Indonesia</div></div></div>
-            <div className="ii"><div className="ii-ico">💼</div><div><div className="ii-l">Status</div><div className="ii-v"><span className="ii-badge">🟢 Open to work</span></div></div></div>
-            <div className="ii"><div className="ii-ico">🎓</div><div><div className="ii-l">Education</div><div className="ii-v">Informatics · UPN &quot;Veteran&quot; Jatim</div></div></div>
-            <div className="ii"><div className="ii-ico">📱</div><div><div className="ii-l">Mobile</div><div className="ii-v">Flutter · Dart</div></div></div>
-            <div className="ii"><div className="ii-ico">🔧</div><div><div className="ii-l">Backend &amp; Web</div><div className="ii-v">Laravel · React · Supabase</div></div></div>
-            <div className="ii"><div className="ii-ico">📞</div><div><div className="ii-l">WhatsApp</div><div className="ii-v"><a href="https://wa.me/6282244089648">+62 822-4408-9648</a></div></div></div>
-            <div className="ii"><div className="ii-ico">📸</div><div><div className="ii-l">Instagram</div><div className="ii-v"><a href="https://www.instagram.com/pallarfnt_/" target="_blank" rel="noreferrer">@pallarfnt_</a></div></div></div>
+            <div className="ii"><div className="ii-ico">📍</div><div><div className="ii-l">{info.location[0]}</div><div className="ii-v">{info.location[1]}</div></div></div>
+            <div className="ii"><div className="ii-ico">💼</div><div><div className="ii-l">{info.status[0]}</div><div className="ii-v"><span className="ii-badge">{info.status[1]}</span></div></div></div>
+            <div className="ii"><div className="ii-ico">🎓</div><div><div className="ii-l">{info.education[0]}</div><div className="ii-v">{info.education[1]}</div></div></div>
+            <div className="ii"><div className="ii-ico">📱</div><div><div className="ii-l">{info.mobile[0]}</div><div className="ii-v">{info.mobile[1]}</div></div></div>
+            <div className="ii"><div className="ii-ico">🔧</div><div><div className="ii-l">{info.backend[0]}</div><div className="ii-v">{info.backend[1]}</div></div></div>
+            <div className="ii"><div className="ii-ico">📞</div><div><div className="ii-l">{info.whatsapp[0]}</div><div className="ii-v"><a href="https://wa.me/6282244089648">{info.whatsapp[1]}</a></div></div></div>
+            <div className="ii"><div className="ii-ico">📸</div><div><div className="ii-l">{info.instagram[0]}</div><div className="ii-v"><a href="https://www.instagram.com/pallarfnt_/" target="_blank" rel="noreferrer">{info.instagram[1]}</a></div></div></div>
           </div>
         </div>
       </div>

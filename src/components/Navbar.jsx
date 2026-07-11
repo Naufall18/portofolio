@@ -1,14 +1,16 @@
 import { useEffect, useState } from 'react';
-
-const LINKS = [
-  { href: '#about', label: 'About' },
-  { href: '#skills', label: 'Skills' },
-  { href: '#work', label: 'Work' },
-  { href: '#experience', label: 'Experience' },
-];
+import { useLang } from '../i18n.jsx';
 
 export default function Navbar() {
   const [drawerOpen, setDrawerOpen] = useState(false);
+  const { t, lang, setLang } = useLang();
+
+  const LINKS = [
+    { href: '#about', label: t.nav.about },
+    { href: '#skills', label: t.nav.skills },
+    { href: '#work', label: t.nav.work },
+    { href: '#experience', label: t.nav.experience },
+  ];
 
   useEffect(() => {
     const onScroll = () => {
@@ -27,6 +29,25 @@ export default function Navbar() {
     }
   };
 
+  const LangToggle = () => (
+    <div className="lang-toggle" role="group" aria-label="Language">
+      <button
+        className={lang === 'id' ? 'lt-on' : ''}
+        onClick={() => setLang('id')}
+        aria-pressed={lang === 'id'}
+      >
+        ID
+      </button>
+      <button
+        className={lang === 'en' ? 'lt-on' : ''}
+        onClick={() => setLang('en')}
+        aria-pressed={lang === 'en'}
+      >
+        EN
+      </button>
+    </div>
+  );
+
   return (
     <>
       <nav id="nav">
@@ -39,15 +60,19 @@ export default function Navbar() {
               <a href={l.href} onClick={(e) => smoothScroll(e, l.href)}>{l.label}</a>
             </li>
           ))}
+          <li><LangToggle /></li>
           <li>
             <a href="#contact" onClick={(e) => smoothScroll(e, '#contact')} className="nav-cta">
-              Let&apos;s talk
+              {t.nav.cta}
             </a>
           </li>
         </ul>
-        <button className="menu-btn" onClick={() => setDrawerOpen(true)} aria-label="Open menu">
-          ☰
-        </button>
+        <div className="nav-mobile">
+          <LangToggle />
+          <button className="menu-btn" onClick={() => setDrawerOpen(true)} aria-label="Open menu">
+            ☰
+          </button>
+        </div>
       </nav>
 
       <div className={`mobile-drawer ${drawerOpen ? 'open' : ''}`}>
@@ -65,7 +90,7 @@ export default function Navbar() {
           ))}
           <li>
             <a href="#contact" onClick={(e) => smoothScroll(e, '#contact')} className="nav-cta">
-              Let&apos;s talk
+              {t.nav.cta}
             </a>
           </li>
         </ul>
